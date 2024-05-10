@@ -8,6 +8,7 @@
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('posts.create') }}"> Create New Post</a>
+
             </div>
         </div>
     </div>
@@ -38,12 +39,19 @@
                     <a class="btn btn-info" href="{{ route('posts.show',$post->id) }}">Show</a>
       
                     <a class="btn btn-primary" href="{{ route('posts.edit',$post->id) }}">Edit</a>
-     
+                 
+                    <a class="btn btn-success" href="{{ route('posts.comment', $post->id) }}">  Add comment</a>
+
+                    <a class="btn btn-success" href="{{ route('posts.show_comments', $post->id) }}">  show comment</a>
+                   
                     @csrf
                     @method('DELETE')
         
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
+
+             
+     
             </td>
         </tr>
         @endforeach

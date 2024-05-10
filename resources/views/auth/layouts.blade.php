@@ -28,6 +28,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('posts.index') }}">AllPost</a>
                     </li>
+                  
+                 
+                   
                     @endguest
                 </ul>
             </div>

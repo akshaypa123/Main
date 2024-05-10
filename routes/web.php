@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserAuthController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CommentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,4 +29,11 @@ Route::get('signout', [UserAuthController::class, 'signOut'])->name('signout');
 
  Route::resource('posts', PostController::class);
 
-//Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
+// Route::get('/post/comment', [CommentController::class, 'create'])->name('posts.create');
+
+ Route::get('/posts/{post_id}/comment', [CommentController::class, 'create'])->name('posts.comment');
+ //Route::post('/posts/{postId}/comment', [CommentController::class, 'store'])->name('comment.store');
+ Route::post('/comment/store', [CommentController::class, 'store'])->name('comment.store');
+
+//  Route::get('/posts/{postId}', [CommentController::class, 'show']);
+ Route::get('/posts/{postId}/comments', [CommentController::class, 'show'])->name('posts.show_comments');
