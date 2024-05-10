@@ -1,3 +1,11 @@
+important step project run
+First, clone the app from Git repository: git clone https://github.com/akshaypa123/choice_tech_task.git.
+Second step, open phpMyAdmin and import the database file: post_app_db.sql.
+Third step, run composer update command in the project directory.
+Fourth step, add the .env file to the project directory.
+Fifth step, run the Laravel server: php artisan serve
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
