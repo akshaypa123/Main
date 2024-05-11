@@ -60,7 +60,6 @@ public function show($postId)
     // Retrieve comments associated with the post
     $comments = Comment::where('post_id', $postId)->get();
 
-    //return $comments;
 
     // Pass post and comments data to the view
     return view('post.show_comments', compact('post', 'comments'));

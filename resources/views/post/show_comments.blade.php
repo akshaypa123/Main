@@ -6,7 +6,12 @@
 
 @foreach ($comments as $comment)
     <div>
-        <p><strong>User:</strong> {{ $comment->user ? $comment->user->name : 'Akshay' }}</p>
+        @if ($comment->user)
+        <p><strong>User:</strong> {{ $comment->user->name }}</p>
+    @else
+        <p><strong>User:</strong> Unknown</p>
+    @endif
+
 
         <p><strong>Comment:</strong> {{ $comment->text }}</p>
     </div>
